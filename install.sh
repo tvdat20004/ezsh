@@ -3,7 +3,8 @@
 # Flags to determine if the arguments were passed
 cp_hist_flag=false
 noninteractive_flag=false
-
+# install python3
+sudo pacman -Sy python3
 # Loop through all arguments
 for arg in "$@"
 do
@@ -190,4 +191,29 @@ else
 
     fi
 fi
+# install micro editor
+echo -e "Installing micro ..."
+sudo pacman -Sy micro 
+# set alias to ~/.zshrc
+echo -e "Set alias ..."
+echo """
+alias cls="clear"
+alias update="sudo pacman -Sy"
+alias search="pacman -Ss"
+alias install="sudo pacman -Sy"
+alias remove="sudo pacman -R"
+""" >> ~/.zshrc
+# enable zsh-autosuggestions
+echo -e "Enabling zsh-autosuggestions"
+echo """
+plugins+=(zsh-autosuggestions)
+"""
+# install pip
+echo -e "Installing pip and some python packages..."
+sudo pacman -Sy python-pip
+pip install pwntools --break-system-packages
+pip install pycryptodome sympy
+# install sagemath
+echo -e "Installing sagemath ...
+sudo pacman -Sy sagemath sagemath-doc
 exit
