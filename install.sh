@@ -218,6 +218,5 @@ pip install pwntools pycryptodome sympy z3-solver --break-system-packages
 # install sagemath
 echo -e "Installing sagemath ..."
 sudo pacman -Sy sagemath sagemath-doc
-# install cuda toolkit
-sudo pacman -Sy cuda-toolkit
+
 exit
