@@ -207,13 +207,15 @@ alias remove="sudo pacman -R"
 echo -e "Enabling zsh-autosuggestions"
 echo """
 plugins+=(zsh-autosuggestions)
-"""
+""" >> ~/.zshrc
 # install pip
 echo -e "Installing pip and some python packages..."
 sudo pacman -Sy python-pip
 pip install pwntools --break-system-packages
 pip install pycryptodome sympy
 # install sagemath
-echo -e "Installing sagemath ...
+echo -e "Installing sagemath ..."
 sudo pacman -Sy sagemath sagemath-doc
+# install cuda toolkit
+sudo pacman -Sy cuda-toolkit
 exit
