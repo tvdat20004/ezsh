@@ -194,9 +194,12 @@ fi
 # install micro editor
 echo -e "Installing micro ..."
 sudo pacman -Sy micro 
+# setup sublime 
+export PATH=$PATH:/c/Users/Lenovo/scoop/apps/sublime-text/4-4143/subl # path of subl.exe
 # set alias to ~/.zshrc
 echo -e "Set alias ..."
 echo """
+alias subl="subl.exe"
 alias cls="clear"
 alias update="sudo pacman -Sy"
 alias search="pacman -Ss"
