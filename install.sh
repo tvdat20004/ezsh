@@ -211,8 +211,7 @@ plugins+=(zsh-autosuggestions)
 # install pip
 echo -e "Installing pip and some python packages..."
 sudo pacman -Sy python-pip
-pip install pwntools --break-system-packages
-pip install pycryptodome sympy
+pip install pwntools pycryptodome sympy z3-solver --break-system-packages
 # install sagemath
 echo -e "Installing sagemath ..."
 sudo pacman -Sy sagemath sagemath-doc
