@@ -213,7 +213,7 @@ plugins+=(zsh-autosuggestions)
 """ >> ~/.zshrc
 # install pip and some stuffs
 echo -e "Installing pip and some python packages..."
-sudo pacman -Sy python-pip neofetch
+sudo pacman -Sy python-pip neofetch netcat
 pip install pwntools pycryptodome sympy z3-solver --break-system-packages
 # install sagemath
 echo -e "Installing sagemath ..."
