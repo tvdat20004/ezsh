@@ -4,6 +4,7 @@
 cp_hist_flag=false
 noninteractive_flag=false
 # install python3
+sudo apt install python3 python3-pip
 sudo pacman -Sy python3
 # Loop through all arguments
 for arg in "$@"
