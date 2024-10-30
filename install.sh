@@ -205,7 +205,7 @@ alias cls="clear"
 alias update="sudo pacman -Sy"
 alias search="pacman -Ss"
 alias install="sudo pacman -Sy"
-alias remove="sudo pacman -R"
+alias remove="sudo pacman -Rns"
 """ >> ~/.zshrc
 # enable zsh-autosuggestions
 echo -e "Enabling zsh-autosuggestions"
